@@ -10,9 +10,13 @@ public class Pelota extends Actor
 {
     private int x;
     private int y;
+    private int px;
+    private int py;
     
-    public Pelota()
+    public Pelota(int Cx,int Cy)
     {
+        px=Cx;
+        py=Cy;
         x=10; //Incremento en x
         y=10; //Incremento en y
     }
@@ -25,10 +29,6 @@ public class Pelota extends Actor
     @Override
     public void act() 
     {
-        //Consulta coordenadas actuales heredadas 
-       int px=this.getX();
-       int py=this.getY();
-       
        //Se calculan las nuevas coordenadas
        int nuevoX=x+px;
        int nuevoY=y+py;
