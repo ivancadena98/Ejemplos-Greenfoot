@@ -10,13 +10,9 @@ public class Pelota extends Actor
 {
     private int x;
     private int y;
-    private int px;
-    private int py;
     
-    public Pelota(int Cx,int Cy)
+    public Pelota()
     {
-        px=Cx;
-        py=Cy;
         x=10; //Incremento en x
         y=10; //Incremento en y
     }
@@ -29,11 +25,14 @@ public class Pelota extends Actor
     @Override
     public void act() 
     {
-       //Se calculan las nuevas coordenadas
+        int px=this.getX();
+        int py=this.getY();
+       //Se calculan las nuevas coordenadas int px=this.ge
        int nuevoX=x+px;
        int nuevoY=y+py;
        
-       //Se accede añ mundo pára conocer eñ tamaño
+
+      //Se accede añ mundo pára conocer eñ tamaño
        World m=this.getWorld();
        if(nuevoX > m.getWidth()){   //Rebota pa' la derecha
         x=-x;
